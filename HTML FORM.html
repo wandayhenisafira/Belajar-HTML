@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>my feedback form</title>
+</html>
+</head>
+    <h1>my feedback form</h1>
+
+    <form action="process_feedback.php" method="post"enctype="multipart/form-data">
+
+    <ul>
+        <li>Name:<input type="text" name="name"><br></p>
+        <li>Email:<input type="email" name="email"><br></p>
+        <li>Password:<input type="password" name="password"><br></p>
+    </ul>
+    <p>Please check all the emotions that apply to you:</p>
+        <ul>
+            <li><label><input type="checkbox"name="emotion" value="Angry">Angry</label></li>
+            <li><label><input type="checkbox"name="emotion" value="Sad">Sad</label></li>
+            <li><label><input type="checkbox"name="emotion" value="Happy" checked/>Happy</label></li>
+            <li><label><input type="checkbox"name="emotion" value="Ambivalent">Ambivalent</label></li>
+        </ul>
+    <p>How sastisfied ware you with our service?</p>
+        <ul>
+            <li><label><input type="radio"name="satisfaction"value="Very satisfied" checked>Very Satisfied</label></li>
+            <li><label><input type="radio"name="satisfaction"value="satisfied">Satisfied</label></li>
+            <li><label><input type="radio"name="saticfaction"value="Dind't care">Dind't care</label></li>
+            <li><label><input type="radio"name="saticfaction"value="Dissatisfied">Dissatisfied</label></li>
+            <li><label><input type="radio"name="saticfaction"value="Very Dissatisfied">Very Dissatisfied</label></li>
+        </ul>
+    <ul>
+       <li> Futher comments: 
+      <textarea name="comments"cols="50" rows=""4></textarea>
+      </li>
+         <li>
+            Bio photo:
+            <input type="file"name="file_bio">
+        </li>
+       ><li>Locatiom visited:
+        <select name="location">
+            <option value="">select location</option>
+            <option value="jakarta">Jakarta</option>
+            <option value="bandung">Bandung</option>
+            <option value="bali">Bali</option>
+            <option value="surabaya">Surabaya</option>
+        </select>
+        </li>
+      <li><input type="submit"value="Submit"></li>
+
+    </form>
+    </body>
+    </html>
