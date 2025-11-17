@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>My Feedback Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        .container {
+            width: 480px;
+            background: #fff;
+            margin: auto;
+            padding: 30px 35px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 23px;
+            font-weight: 800;
+            color: #2f8b3c;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #d30000;
+            font-size: 14px;
+            margin-top: 5px;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin-bottom: 18px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 9px;
+            margin-top: 6px;
+            border: 1px solid #cfcfcf;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+            font-weight: 600;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: 800;
+            margin: 28px 0 10px 0;
+            color: #333;
+        }
+
+        .checkbox-item,
+        .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding-left: 15px;
+            margin: 6px 0;
+        }
+
+        .checkbox-item label,
+        .radio-item label {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            transform: scale(1.15);
+        }
+
+        .bio-row {
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+
+        .bio-row label {
+            width: auto;
+            margin-right: 0;
+            font-weight: 700;
+        }
+
+        .bio-row input[type="file"] {
+            border: none;
+            width: auto;
+            padding: 0;
+            background: none;
+            margin-left: 0;
+            font-weight: normal;
+        }
+
+        .location-row {
+            font-weight: 700; 
+        }
+
+        .location-row select {
+            font-weight: normal;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #33b14d;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 17px;
+            margin-top: 15px;
+            cursor: pointer;
+            font-weight: normal;
+        }
+
+        button:hover {
+            background: #2a9c43;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>My Feedback Form</h1>
+    <div class="subtitle">Kirimkan feedback mu untuk akuu!!</div>
+
+    <form>
+
+        <ul>
+            <li>Name :
+                <input type="text" name="name">
+            </li>
+
+            <li>Email :
+                <input type="email" name="email">
+            </li>
+
+            <li>Password :
+                <input type="password" name="password">
+            </li>
+
+            <li>Hobi :
+                <input type="text" name="hobi" placeholder="Masukkan hobimu">
+            </li>
+        </ul>
+
+        <p>Please check all the emotions that apply to you :</p>
+
+        <div class="checkbox-item">
+            <input type="checkbox" name="emotion" value="Angry">
+            <label>Angry</label>
+        </div>
+
+        <div class="checkbox-item">
+            <input type="checkbox" name="emotion" value="Sad">
+            <label>Sad</label>
+        </div>
+
+        <div class="checkbox-item">
+            <input type="checkbox" name="emotion" value="Happy">
+            <label>Happy</label>
+        </div>
+
+        <div class="checkbox-item">
+            <input type="checkbox" name="emotion" value="Ambivalent">
+            <label>Ambivalent</label>
+        </div>
+
+        <p>How satisfied were you with our service :</p>
+
+        <div class="radio-item">
+            <input type="radio" name="satisfaction" value="Very Satisfied">
+            <label>Very Satisfied</label>
+        </div>
+
+        <div class="radio-item">
+            <input type="radio" name="satisfaction" value="Satisfied">
+            <label>Satisfied</label>
+        </div>
+
+        <div class="radio-item">
+            <input type="radio" name="satisfaction" value="Didn't Care">
+            <label>Didn't Care</label>
+        </div>
+
+        <div class="radio-item">
+            <input type="radio" name="satisfaction" value="Dissatisfied">
+            <label>Dissatisfied</label>
+        </div>
+
+        <div class="radio-item">
+            <input type="radio" name="satisfaction" value="Very Dissatisfied">
+            <label>Very Dissatisfied</label>
+        </div>
+
+        <ul>
+            
+            <li>Further Comments :
+                <textarea name="comments" rows="4"></textarea>
+            </li>
+
+            <li class="bio-row">
+                <label>Bio photo :</label><input type="file" name="file_bio">
+            </li>
+
+            <li class="location-row">
+                Location visited :
+                <select name="location">
+                    <option value="">Select location</option>
+                    <option value="jakarta">Jakarta</option>
+                    <option value="bandung">Bandung</option>
+                    <option value="bali">Bali</option>
+                    <option value="surabaya">Surabaya</option>
+                </select>
+            </li>
+
+            <li>
+                <button type="submit">Kirim</button>
+            </li>
+        </ul>
+
+    </form>
+
+</div>
+
+</body>
+</html>
